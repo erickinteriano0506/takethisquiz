@@ -71,3 +71,30 @@ function render(questionIndex) {
         listItem.addEventListener("click", (compare));
     })
 }
+
+function compare(event) {
+    var element = event.target;
+
+    if (element.matches("li")) {
+
+        var createDiv = document.createElement("div");
+        createDiv.setAttribute("id", "createDiv");
+
+        if (element.textContent == questions[questionIndex].answer) {
+            score++;
+            createDiv.textContent = "Correct!";
+        } else {
+            secondsLeft = secondsLeft - penalty;
+            createDiv.textContent = "Wrong! The answer is: " + questions[questionIndex].answer;
+        }
+    }
+
+    if (questionIndex >= questions.length) {
+        allDone();
+        createDiv.textContent = "Done!" + " " + "You got " + score + "/" + questions.length + " Right!";
+    } else {
+        render(questionIndex);
+    }
+    questions.appendChild(createDiv);
+}
+        
