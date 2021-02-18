@@ -21,3 +21,41 @@ var questions = [
         answer: "Vormir"
     },
 ];
+
+var score = 0;
+var questionIndex = 0;
+
+
+var currentTime = document.querySelector("currentTime");
+var timer = document.querySelector("#startTime");
+var questions = document.querySelector("#questions");
+var wrapper = document.querySelector("#wrapper");
+
+var secondsLeft = 76;
+var holdInterval= 0;
+var penalty = 10;
+var ulCreate= document.createElement("ul");
+
+timer.addEventListener("click", function() {
+    if (holdInterval === 0) {
+        holdInterval = setInterval(function () {
+            secondsLeft--;
+            currentTime.textContent = "Time left " + secondsLeft;
+
+            if (secondsLeft <= 0) {
+                clearInterval(holdInterval);
+                allDone();
+                currentTime.textContent = "Out of time!";
+
+            }
+        }, 1000);
+    }
+    render(questionIndex); 
+});
+
+function render(questionIndex) {
+    questions.innerHtml = "";
+    ulCreate.innerHTML = "";
+
+    for (var i = 0; i < questions.length; i++)
+}
