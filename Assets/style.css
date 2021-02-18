@@ -1,0 +1,29 @@
+body{
+    background-image: url("https://wi.wallpapertip.com/wsimgs/64-642455_hd-avengers-wallpaper-minimalist-wallpaper-cermin-avengers.jpg");
+    
+    background-position: center;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#wrapper{
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    height: 500px;
+    width: 500px;
+    border: 2px #0C1520;
+}
+
+#startTime{
+    background-color: #8E9599;
+    margin-left: 33%;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #1E303A;
+}
+
+#questions{
+    margin:20px;
+}
