@@ -1,11 +1,4 @@
-body{
-    background-image: url("https://wi.wallpapertip.com/wsimgs/64-642455_hd-avengers-wallpaper-minimalist-wallpaper-cermin-avengers.jpg");
-    
-    background-position: center;
-    
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 
 #wrapper{
     position: absolute;
@@ -27,3 +20,37 @@ body{
 #questions{
     margin:20px;
 }
+
+#currentTime {
+    float: right;
+}
+
+#goBack {
+    background-color: #8E9599;
+    position: relative;
+    padding: 10px;
+    font-size: 20px;
+    color: #1E303A;
+    top: 30%;
+    left: 55%;
+    width: auto;
+    text-align: center;
+}
+
+#clear {
+    background-color: #8E9599;
+    position: relative;
+    padding: 10px;
+    font-size: 20px;
+    color: #1E303A;
+    top: 30%;
+    right: 5%;
+    text-align: center;
+}
+
+button {
+    border-radius: 8px;
+}
+
+
+    
